@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans|Trade+Winds&display=swap");
+
+li:nth-child(1) {
+  font-family: "Odibee Sans";
+}
+li:nth-child(2) {
+  font-family: "Trade Winds";
+}
