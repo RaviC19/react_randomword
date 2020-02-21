@@ -1,21 +1,30 @@
 import React, { useState } from "react";
 
-const data = [
-  { word: "Orange" },
-  { word: "Banana" },
-  { word: "Apple" },
-  { word: "Pineapple" },
-  { word: "Melon" },
-  { word: "Kiwi" },
-  { word: "Mango" },
-  { word: "Guava" },
-  { word: "Lychee" },
-  { word: "Grape" }
+const words = [
+  "Orange",
+  "Banana",
+  "Apple",
+  "Pineapple",
+  "Melon",
+  "Kiwi",
+  "Mango",
+  "Guava",
+  "Lychee",
+  "Grape"
 ];
 
 function RandomWord() {
-  const [random, setRandom] = useState(data);
-  return <button>HELLO WE ARE WORKING</button>;
+  const [pointer, setPointer] = useState(0);
+  function handleClick() {
+    const randomNumber = Math.floor(Math.random() * words.length);
+    setPointer(randomNumber);
+  }
+  return (
+    <div>
+      {words[pointer]}
+      <button onClick={handleClick}>Hungry? Press for food</button>
+    </div>
+  );
 }
 
 export default RandomWord;

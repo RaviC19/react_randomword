@@ -11,9 +11,9 @@ function App() {
   }
   return (
     <div>
-      <RandomWord />
       <ToggleButton isOn={isOn} handleClick={handleClick} />
       {isOn && <FontViewer />}
+      <RandomWord />
     </div>
   );
 }
